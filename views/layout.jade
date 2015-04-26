@@ -1,0 +1,19 @@
+doctype html
+html(ng-app='ToDoListApp')
+  head
+    title= title
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='/javascripts/jquery.js')
+    script(src='/javascripts/angular.js')
+    script(src='/javascripts/angular-resource.js')
+    script(src='/javascripts/angular-ui.js')
+    script(src='/javascripts/jquery-ui.js')
+    script(src='/javascripts/sortable.js')
+    script(src='/javascripts/angular-animate.js')
+    script(src='/javascripts/app.js')
+
+  body(ng-controller='ToDoListController')
+
+    block content

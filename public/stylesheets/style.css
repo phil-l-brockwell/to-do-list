@@ -1,0 +1,142 @@
+body
+{
+  background-color: #A9BCF5;
+  font-family: arial;
+  margin: 0;
+}
+
+h1
+{
+  text-align: center;
+  text-shadow: 2px 2px white;
+  color: #000052;
+}
+
+label
+{
+  color: #000052;
+}
+
+.to-do-img
+{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  float: left;
+  margin: 5px;
+}
+
+form
+{
+  padding-top: 30px;
+  width: 120px;
+  float: left;
+  position: fixed;
+  height: 1000px;
+  background-color: #F0E6FF;
+  text-align: center;
+}
+
+form .btn
+{
+  width: 110px;
+}
+
+#tab
+{
+  width: 40%;
+}
+
+ul
+{
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0;
+  margin-left: 120px;
+  width: 400px;
+}
+
+li
+{
+  height: 120px;
+  width: auto;
+  font-size: 30px; 
+}
+
+li .btn
+{
+  margin-top: 40px;
+}
+
+.btn 
+{
+  background-color: #000052;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.redbtn
+{
+  background-color: red;
+}
+
+.greenbtn
+{
+  background-color: green;
+}
+
+.additem
+{
+  background-color: white;
+  color: black;
+}
+
+.ng-enter
+{
+  transition: 0.75s;
+  opacity: 0;
+}
+
+.ng-enter-stagger
+{
+  transition-delay:0.1s;
+}
+
+.ng-enter-active
+{
+  opacity: 1;
+}
+
+.ng-leave
+{
+  transition: 0.75s;
+  opacity: 1;
+}
+
+.ng-leave-stagger
+{
+  transition-delay:0.1s;
+}
+
+.ng-leave-active
+{
+  opacity: 0;
+}
+
+.btn:hover 
+{
+  background: #dae8f0;
+  background-image: -webkit-linear-gradient(top, #dae8f0, #006fbf);
+  background-image: -moz-linear-gradient(top, #dae8f0, #006fbf);
+  background-image: -ms-linear-gradient(top, #dae8f0, #006fbf);
+  background-image: -o-linear-gradient(top, #dae8f0, #006fbf);
+  background-image: linear-gradient(to bottom, #dae8f0, #006fbf);
+  text-decoration: none;
+}
