@@ -21,9 +21,6 @@ I was able to complete this task and incorporate some extra functionality using 
 
 # Screenshots
 
-![ScreenShot](https://github.com/robertpulson/todo_challenge/blob/master/screenshots/Screen%20Shot%202015-04-27%20at%2016.55.06.png?raw=true)
-![ScreenShot](https://github.com/robertpulson/todo_challenge/blob/master/screenshots/Screen%20Shot%202015-04-27%20at%2016.56.41.png?raw=true)
-![ScreenShot](https://github.com/robertpulson/todo_challenge/blob/master/screenshots/Screen%20Shot%202015-04-27%20at%2016.59.13.png?raw=true)
 
 # Getting Started
 
