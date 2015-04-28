@@ -33,7 +33,7 @@ toDoList.controller('ToDoListController', function($scope, $resource, localStora
 
   $scope.addNewItem = function() {
     var search = getLastWordFrom($scope.newItem);
-    var searchResource = $resource('https://pixabay.com/api/?', {username: username, key: key, q: search, image_type: image});
+    var searchResource = $resource('http://pixabay.com/api/?', {username: username, key: key, q: search, image_type: image});
     searchResource.get(function (data) {
       if (data.hits[0] == null) {
         pushToList({ goal:capitalize($scope.newItem), complete:false, imgSrc:defaultPhoto });  
