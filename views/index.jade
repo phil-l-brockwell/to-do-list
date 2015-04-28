@@ -4,11 +4,13 @@ block content
   form
     h1 To Do List
     label Add an Item
+    br
     input(class='btn', maxlength='25', size='15' type='text', ng-model='newItem')
     button(class='btn', ng-class="{'additem' : newItem}", ng-click='addNewItem()') Add
     br
     br
     label View
+    br
     button(class='btn' ng-click='changeView(1)' ng-class="{'greenbtn' : view == 1}") Complete
     button(class='btn' ng-click='changeView(2)' ng-class="{'greenbtn' : view == 2}") Active
     button(class='btn' ng-click='changeView(0)' ng-class="{'greenbtn' : view == 0}") All
@@ -16,19 +18,19 @@ block content
     br
     button(class='btn', ng-click='clearAll()') Clear All
 
-  div(class='tab' class='view' ng-show='view == 0')
+  div(class='tab' class='view' ng-show='view == 0' style="padding-left: 90px;")
     ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
       li(ng-repeat='item in itemsList')
         img(class='to-do-img' ng-src='{{item.imgSrc}}')
         button(class='btn redbtn' ng-class="{'greenbtn' : checkComplete($index)}" ng-click='markAsComplete($index)') {{item.goal}} &#10004;
 
-  div(class='tab' class='view' ng-show='view == 1')
+  div(class='tab' class='view' ng-show='view == 1' style="padding-left: 90px;")
     ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
       li(ng-repeat='item in itemsList' ng-show='checkComplete($index)')
         img(class='to-do-img' ng-src='{{item.imgSrc}}')
         button(class='btn redbtn' ng-class="{'greenbtn' : checkComplete($index)}" ng-click='markAsComplete($index)') {{item.goal}} &#10004;
 
-  div(class='tab' class='view' ng-show='view == 2')
+  div(class='tab' class='view' ng-show='view == 2' style="padding-left: 90px;")
     ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
       li(ng-repeat='item in itemsList' ng-hide='checkComplete($index)')
         img(class='to-do-img' ng-src='{{item.imgSrc}}')
