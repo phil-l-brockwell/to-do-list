@@ -18,20 +18,28 @@ block content
     br
     button(class='btn', ng-click='clearAll()') Clear All
 
-  div(class='tab' class='view' ng-show='view == 0' style="padding-left: 90px;")
-    ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
-      li(ng-repeat='item in itemsList')
-        img(class='to-do-img' ng-src='{{item.imgSrc}}')
-        button(class='btn redbtn' ng-class="{'greenbtn' : checkComplete($index)}" ng-click='markAsComplete($index)') {{item.goal}} &#10004;
+  div(id='myCanvasContainer')
+    canvas(width='1000' height='450' id='myCanvas')
+      p
+        Oops, your browser doesn't support the canvas element. Please install Chrome.
 
-  div(class='tab' class='view' ng-show='view == 1' style="padding-left: 90px;")
-    ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
-      li(ng-repeat='item in itemsList' ng-show='checkComplete($index)')
-        img(class='to-do-img' ng-src='{{item.imgSrc}}')
-        button(class='btn redbtn' ng-class="{'greenbtn' : checkComplete($index)}" ng-click='markAsComplete($index)') {{item.goal}} &#10004;
+      div(id='tags' class='tab' class='view' ng-show='view == 0' style="padding-left: 90px;")
+        ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
+          li(ng-repeat='item in itemsList')
+            a(href='#{{item.goal}}')
+              img(class='to-do-img' ng-src='{{item.imgSrc}}')
+              button(class='btn redbtn' ng-class="{'greenbtn' : checkComplete($index)}" ng-click='markAsComplete($index)') {{item.goal}} &#10004;
 
-  div(class='tab' class='view' ng-show='view == 2' style="padding-left: 90px;")
-    ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
-      li(ng-repeat='item in itemsList' ng-hide='checkComplete($index)')
-        img(class='to-do-img' ng-src='{{item.imgSrc}}')
-        button(class='btn redbtn' ng-click='markAsComplete($index)') {{item.goal}} &#10004;
+      div(id='tags' class='tab' class='view' ng-show='view == 1' style="padding-left: 90px;")
+        ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
+          li(ng-repeat='item in itemsList' ng-show='checkComplete($index)')
+            a(href='#{{item.goal}}')
+              img(class='to-do-img' ng-src='{{item.imgSrc}}')
+              button(class='btn redbtn' ng-class="{'greenbtn' : checkComplete($index)}" ng-click='markAsComplete($index)') {{item.goal}} &#10004;
+
+      div(id='tags' class='tab' class='view' ng-show='view == 2' style="padding-left: 90px;")
+        ul(ui-sortable="{ 'ui-floating': true }" ng-model="itemList")
+          li(ng-repeat='item in itemsList' ng-hide='checkComplete($index)')
+            a(href='#{{item.goal}}')
+              img(class='to-do-img' ng-src='{{item.imgSrc}}')
+              button(class='btn redbtn' ng-click='markAsComplete($index)') {{item.goal}} &#10004;
