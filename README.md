@@ -41,9 +41,13 @@ Use homebrew to install node (if not installed):
 
 `brew install node`
 
-Install express:
+Install express(if not installed):
 
 `npm install -g express`
+
+Install packages:
+
+`npm install`
 
 Then start your server with `npm start` and paste `localhost:3000` into your browser to get started.
 
